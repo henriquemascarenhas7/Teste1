@@ -1,0 +1,215 @@
+/* styles.css — landing page responsiva e acessível */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;400;500&display=swap');
+
+
+/* ====== Variáveis de tema ====== */
+:root{
+  --bg: #0f0f12;
+  --panel: #121218;
+  --muted: #cfd8e3;
+  --accent: #7c5cff; /* cor principal */
+  --accent-2: #5ad3c8;
+  --radius: 12px;
+  --container: 1100px;
+  --gap: 1.25rem;
+  --shadow: 0 8px 30px rgba(2,6,23,0.6);
+  --max-width: 1100px;
+}
+
+/* ====== Reset simples ====== */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg), #0b0b0d 60%);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  z-index:1000;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem .75rem;
+  background:#fff;
+  color:#000;
+  border-radius:6px;
+}
+
+/* Utility container */
+.container{
+  width:90%;
+  max-width:var(--container);
+  margin:0 auto;
+}
+
+/* ===== Header ===== */
+.site-header{
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:1rem 0;
+}
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  color:var(--muted);
+  text-decoration:none;
+}
+.brand-logo{color:var(--accent)}
+.brand-name{font-weight:700; font-size:1.05rem; letter-spacing:.3px}
+
+/* Nav */
+.main-nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.nav-link{
+  color:var(--muted);
+  text-decoration:none;
+  padding:.45rem .6rem;
+  border-radius:8px;
+  transition:background .18s, transform .12s;
+  font-weight:500;
+}
+.nav-link:hover,
+.nav-link:focus{ background:rgba(255,255,255,0.02); transform:translateY(-2px)}
+.nav-cta{
+  background:linear-gradient(90deg,var(--accent),var(--accent-2));
+  color:#051018;
+  padding:.5rem .8rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  margin-left:.5rem;
+}
+
+/* ===== Hero ===== */
+.hero{
+  padding:3.5rem 0;
+}
+.hero-inner{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  justify-content:space-between;
+}
+.hero-copy{flex:1; min-width:0}
+.hero-title{
+  font-family: Righteous, sans-serif;
+  font-size: clamp(1.9rem, 4.4vw, 2.8rem);
+  margin:0 0 .6rem 0;
+  color:var(--muted);
+}
+.hero-sub{margin:0 0 1.25rem 0; color: #bfc9d9; max-width:640px}
+
+/* CTA buttons */
+.btn{display:inline-block; text-decoration:none; border:0; cursor:pointer; border-radius:10px}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2)); color:#041018; padding:.65rem 1rem; font-weight:700}
+.btn-outline{background:transparent; color:var(--muted); border:1px solid rgba(255,255,255,0.04); padding:.55rem .85rem}
+
+/* small stats under CTA */
+.hero-stats{display:flex; gap:1.2rem; list-style:none; padding:0; margin:1.4rem 0 0 0}
+.hero-stats li{display:flex; flex-direction:column; align-items:flex-start}
+.hero-stats strong{font-size:1.1rem; color:var(--muted)}
+
+/* Hero visual */
+.hero-visual{width:48%; max-width:520px}
+.illustration{width:100%; height:auto; display:block; border-radius:var(--radius); box-shadow:var(--shadow)}
+
+/* ===== Features ===== */
+.section-title{font-size:1.25rem; margin:0 0 1rem 0; color:var(--muted)}
+.features{padding:2rem 0}
+.feature-grid{
+  display:grid;
+  gap:1.25rem;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+}
+.feature{
+  background: rgba(255,255,255,0.02);
+  padding:1.25rem;
+  border-radius:12px;
+  box-shadow: 0 6px 20px rgba(3,6,14,0.6);
+}
+.feature h3{margin:0 0 .4rem 0; color:var(--accent)}
+.feature p{margin:0; color:#c7d2e6; font-size:0.95rem}
+
+/* ===== How it works ===== */
+.how-it-works{padding:2rem 0}
+.how-grid{display:flex; gap:1rem; justify-content:space-between; flex-wrap:wrap}
+.step{flex:1; min-width:180px; background: rgba(255,255,255,0.02); padding:1rem; border-radius:10px; text-align:left}
+.step-number{width:36px;height:36px;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--accent-2)); display:flex;align-items:center;justify-content:center;color:#041018;font-weight:700;margin-bottom:.6rem}
+
+/* ===== Testimonials ===== */
+.testimonials{padding:2rem 0}
+.testimonial{background: rgba(255,255,255,0.01); padding:1rem 1.25rem; border-radius:10px; color:#bfc9d9}
+
+/* ===== Contact form ===== */
+.contact{padding:2rem 0 4rem 0}
+.contact-form{max-width:640px; display:grid; gap:.6rem}
+.contact-form label{font-size:.95rem}
+.contact-form input, .contact-form textarea{
+  background:rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.03);
+  padding:.7rem .9rem;
+  border-radius:8px;
+  color:var(--muted);
+  outline: none;
+}
+.contact-form input:focus, .contact-form textarea:focus{
+  box-shadow: 0 0 0 4px rgba(124,92,255,0.12);
+  border-color:var(--accent);
+}
+.form-actions{display:flex; gap:.6rem; margin-top:.5rem}
+
+/* ===== Footer ===== */
+.site-footer{border-top: 1px solid rgba(255,255,255,0.03); padding:2rem 0; background:transparent}
+.footer-inner{display:flex; justify-content:space-between; gap:1rem; align-items:center; flex-wrap:wrap}
+.footer-link{color:var(--muted); text-decoration:none}
+.footer-link:hover{color:var(--accent)}
+
+/* ===== Accessibility focus ===== */
+:focus{outline: none}
+:focus-visible{outline: 3px solid rgba(124,92,255,0.9); outline-offset:3px; border-radius:6px}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px){
+  .hero-inner{flex-direction:column-reverse; align-items:center}
+  .hero-visual{width:100%}
+  .feature-grid{grid-template-columns:1fr}
+  .how-grid{flex-direction:column}
+  .footer-inner{flex-direction:column; align-items:flex-start}
+  .header-inner{padding: .6rem 0}
+  .nav-cta{display:none} /* escondemos o CTA no nav para telas pequenas */
+}
+
+@media (max-width: 540px){
+  .header-inner{padding:.6rem 0}
+  .main-nav{gap:.3rem}
+  .hero{padding:2rem 0}
+  .hero-title{font-size:1.6rem}
+  .hero-sub{font-size:.95rem}
+  .brand-name{display:none}
+}

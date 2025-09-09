@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Landing page demo — produto/serviço fictício. Exemplo de HTML e CSS limpo, responsivo e acessível." />
+  <title>Shieldly — Segurança para sua comunidade</title>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Shieldly — Página inicial">
+        <!-- small SVG logo inline -->
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M12 2L3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-3z"></path>
+        </svg>
+        <span class="brand-name">Shieldly</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a class="nav-link" href="#features">Recursos</a>
+        <a class="nav-link" href="#how">Como funciona</a>
+        <a class="nav-link" href="#contact">Contato</a>
+        <a class="nav-cta" href="#cta">Adicionar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="site-main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 class="hero-title">Proteja sua comunidade. Com poucos cliques.</h1>
+          <p class="hero-sub">
+            Moderação automática, verificação de membros e ferramentas de segurança desenhadas para servidores ativos.
+            Fácil de configurar — grátis para começar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="cta" href="#" role="button">Adicionar ao servidor</a>
+            <a class="btn btn-outline" href="#features">Ver recursos</a>
+          </div>
+
+          <ul class="hero-stats" aria-hidden="true">
+            <li><strong>+1.2k</strong><span>servidores</span></li>
+            <li><strong>99%</strong><span>redução de spam</span></li>
+            <li><strong>24/7</strong><span>suporte</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- simple illustrative SVG to avoid external images -->
+          <svg viewBox="0 0 600 400" class="illustration" role="img" aria-hidden="true">
+            <rect x="0" y="0" width="600" height="400" rx="20" fill="rgba(255,255,255,0.03)"></rect>
+            <g transform="translate(60,40)">
+              <rect x="0" y="0" width="220" height="120" rx="12" fill="#ffffff10"></rect>
+              <circle cx="280" cy="80" r="60" fill="#ffffff12"></circle>
+              <rect x="30" y="150" width="420" height="190" rx="12" fill="#ffffff06"></rect>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features container">
+      <h2 class="section-title">O que o Shieldly faz</h2>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <h3>Verificação inteligente</h3>
+          <p>Bot automático de verificação com captcha e checagens anti-bot para novos membros.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Bloqueio de links</h3>
+          <p>Filtros personalizáveis que removem/banem links maliciosos antes que causem problemas.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Moderadores automáticos</h3>
+          <p>Configura ações automáticas — warning, mute, kick — com histórico para análise.</p>
+        </article>
+
+        <article class="feature">
+          <h3>Logs e auditoria</h3>
+          <p>Registros detalhados de eventos com fácil exportação para análise.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="how" class="how-it-works container">
+      <h2 class="section-title">Como funciona</h2>
+      <div class="how-grid">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Conectar</h4>
+          <p>Adicione o bot ao servidor e conceda as permissões mínimas necessárias.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Configurar</h4>
+          <p>Use o painel simples para ajustar filtros, canais e níveis de ação.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Proteger</h4>
+          <p>O bot monitora em tempo real e executa ações conforme suas regras.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials container" aria-label="Depoimentos de clientes">
+      <h2 class="section-title">O que a galera diz</h2>
+      <blockquote class="testimonial">
+        <p>"Desde que usamos o Shieldly, o nosso servidor ficou 10x mais tranquilo. Configurar foi rápido."</p>
+        <cite>— Equipe DevHub</cite>
+      </blockquote>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2 class="section-title">Entre em contato</h2>
+
+      <form class="contact-form" action="mailto:seuemail@exemplo.com" method="post" enctype="text/plain" aria-label="Formulário de contato">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <button class="btn btn-outline" type="reset">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Shieldly — Segurança de comunidade</p>
+      <p><a href="#" class="footer-link">Política de privacidade</a> · <a href="#" class="footer-link">Termos</a></p>
+    </div>
+  </footer>
+
+  <!-- small inline script only for dynamic year (optional) -->
+  <script>
+    // Só para preencher o ano no rodapé — não é necessário para a página funcionar
+    try { document.getElementById('year').textContent = new Date().getFullYear(); } catch(e){}
+  </script>
+</body>
+</html>
